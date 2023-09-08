@@ -1,4 +1,3 @@
-import { verify } from 'jsonwebtoken';
 import { UnauthenticatedError } from '../errors/customErrors.js';
 import { verifyJWT } from '../utils/tokenUtils.js';
 
@@ -9,6 +8,7 @@ export const authencticateUser = async (req, res, next) => {
   try {
     const { userId, role } = verifyJWT(token);
     req.user = { userId, role };
+
     next();
   } catch (error) {
     throw new UnauthenticatedError('authentication invalid');

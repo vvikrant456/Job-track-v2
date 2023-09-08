@@ -19,7 +19,7 @@ const JobSchema = new mongoose.Schema(
       type: String,
       default: 'my city',
     },
-    createBy: {
+    createdBy: {
       type: mongoose.Types.ObjectId,
       ref: 'User',
     },
