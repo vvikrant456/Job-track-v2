@@ -9,10 +9,19 @@ import {
   deleteJob,
 } from '../controllers/jobController.js';
 
+import {
+  validateJobInput,
+  validateIdParam,
+} from '../middleware/validationMiddleware.js';
+
 // router.get('/', getAllJobs);
 // router.get('/', createJob);
 
-router.route('/').get(getAllJobs).post(createJob);
-router.route('/:id').get(getJob).patch(updateJob).delete(deleteJob);
+router.route('/').get(getAllJobs).post(validateJobInput, createJob);
+router
+  .route('/:id')
+  .get(validateIdParam, getJob)
+  .patch(validateJobInput, validateIdParam, updateJob)
+  .delete(validateIdParam, deleteJob);
 
 export default router;

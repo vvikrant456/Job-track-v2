@@ -222,7 +222,7 @@ const Register = () => {
   return (
     <div>
       <h1>Register</h1>
-      <Link to='/login'>Login Page</Link>
+      <Link to="/login">Login Page</Link>
     </div>
   );
 };
@@ -238,7 +238,7 @@ const Login = () => {
   return (
     <div>
       <h1>Login</h1>
-      <Link to='/register'>Register Page</Link>
+      <Link to="/register">Register Page</Link>
     </div>
   );
 };
@@ -338,7 +338,7 @@ const Error = () => {
   return (
     <div>
       <h1>Error Page !!!</h1>
-      <Link to='/dashboard'>back home</Link>
+      <Link to="/dashboard">back home</Link>
     </div>
   );
 };
@@ -418,7 +418,7 @@ const Landing = () => {
   return (
     <Wrapper>
       <h1>Landing</h1>
-      <div className='content'>some content</div>
+      <div className="content">some content</div>
     </Wrapper>
   );
 };
@@ -447,11 +447,11 @@ const Landing = () => {
   return (
     <StyledWrapper>
       <nav>
-        <img src={logo} alt='jobify' className='logo' />
+        <img src={logo} alt="jobify" className="logo" />
       </nav>
-      <div className='container page'>
+      <div className="container page">
         {/* info */}
-        <div className='info'>
+        <div className="info">
           <h1>
             job <span>tracking</span> app
           </h1>
@@ -461,14 +461,14 @@ const Landing = () => {
             quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
             narwhal.
           </p>
-          <Link to='/register' className='btn register-link'>
+          <Link to="/register" className="btn register-link">
             Register
           </Link>
-          <Link to='/login' className='btn'>
+          <Link to="/login" className="btn">
             Login / Demo User
           </Link>
         </div>
-        <img src={main} alt='job hunt' className='img main-img' />
+        <img src={main} alt="job hunt" className="img main-img" />
       </div>
     </StyledWrapper>
   );
@@ -548,7 +548,7 @@ import Wrapper from '../assets/wrappers/LandingPage';
 import logo from '../assets/images/logo.svg';
 
 const Logo = () => {
-  return <img src={logo} alt='jobify' className='logo' />;
+  return <img src={logo} alt="jobify" className="logo" />;
 };
 
 export default Logo;
@@ -575,10 +575,10 @@ const Error = () => {
     return (
       <Wrapper>
         <div>
-          <img src={img} alt='not found' />
+          <img src={img} alt="not found" />
           <h3>Ohh! page not found</h3>
           <p>We can't seem to find the page you're looking for</p>
-          <Link to='/dashboard'>back home</Link>
+          <Link to="/dashboard">back home</Link>
         </div>
       </Wrapper>
     );
@@ -645,29 +645,29 @@ import { Link } from 'react-router-dom';
 const Register = () => {
   return (
     <Wrapper>
-      <form className='form'>
+      <form className="form">
         <Logo />
         <h4>Register</h4>
-        <div className='form-row'>
-          <label htmlFor='name' className='form-label'>
+        <div className="form-row">
+          <label htmlFor="name" className="form-label">
             name
           </label>
           <input
-            type='text'
-            id='name'
-            name='name'
-            className='form-input'
-            defaultValue='john'
+            type="text"
+            id="name"
+            name="name"
+            className="form-input"
+            defaultValue="john"
             required
           />
         </div>
 
-        <button type='submit' className='btn btn-block'>
+        <button type="submit" className="btn btn-block">
           submit
         </button>
         <p>
           Already a member?
-          <Link to='/login' className='member-btn'>
+          <Link to="/login" className="member-btn">
             Login
           </Link>
         </p>
@@ -695,15 +695,15 @@ FormRow.jsx
 ```jsx
 const FormRow = ({ type, name, labelText, defaultValue = '' }) => {
   return (
-    <div className='form-row'>
-      <label htmlFor={name} className='form-label'>
+    <div className="form-row">
+      <label htmlFor={name} className="form-label">
         {labelText || name}
       </label>
       <input
         type={type}
         id={name}
         name={name}
-        className='form-input'
+        className="form-input"
         defaultValue={defaultValue}
         required
       />
@@ -724,22 +724,22 @@ import { Link } from 'react-router-dom';
 const Register = () => {
   return (
     <Wrapper>
-      <form className='form'>
+      <form className="form">
         <Logo />
         <h4>Register</h4>
-        <FormRow type='text' name='name' />
-        <FormRow type='text' name='lastName' labelText='last name' />
-        <FormRow type='text' name='location' />
-        <FormRow type='email' name='email' />
+        <FormRow type="text" name="name" />
+        <FormRow type="text" name="lastName" labelText="last name" />
+        <FormRow type="text" name="location" />
+        <FormRow type="email" name="email" />
 
-        <FormRow type='password' name='password' />
+        <FormRow type="password" name="password" />
 
-        <button type='submit' className='btn btn-block'>
+        <button type="submit" className="btn btn-block">
           submit
         </button>
         <p>
           Already a member?
-          <Link to='/login' className='member-btn'>
+          <Link to="/login" className="member-btn">
             Login
           </Link>
         </p>
@@ -763,20 +763,20 @@ import { Link } from 'react-router-dom';
 const Login = () => {
   return (
     <Wrapper>
-      <form className='form'>
+      <form className="form">
         <Logo />
         <h4>Login</h4>
-        <FormRow type='email' name='email' defaultValue='john@gmail.com' />
-        <FormRow type='password' name='password' defaultValue='secret123' />
-        <button type='submit' className='btn btn-block'>
+        <FormRow type="email" name="email" defaultValue="john@gmail.com" />
+        <FormRow type="password" name="password" defaultValue="secret123" />
+        <button type="submit" className="btn btn-block">
           submit
         </button>
-        <button type='button' className='btn btn-block'>
+        <button type="button" className="btn btn-block">
           explore the app
         </button>
         <p>
           Not a member yet?
-          <Link to='/register' className='member-btn'>
+          <Link to="/register" className="member-btn">
             Register
           </Link>
         </p>
@@ -893,12 +893,12 @@ import { Navbar, BigSidebar, SmallSidebar } from '../components';
 const Dashboard = () => {
   return (
     <Wrapper>
-      <main className='dashboard'>
+      <main className="dashboard">
         <SmallSidebar />
         <BigSidebar />
         <div>
           <Navbar />
-          <div className='dashboard-page'>
+          <div className="dashboard-page">
             <Outlet />
           </div>
         </div>
@@ -979,12 +979,12 @@ const Dashboard = () => {
       }}
     >
       <Wrapper>
-        <main className='dashboard'>
+        <main className="dashboard">
           <SmallSidebar />
           <BigSidebar />
           <div>
             <Navbar />
-            <div className='dashboard-page'>
+            <div className="dashboard-page">
               <Outlet />
             </div>
           </div>
@@ -1035,15 +1035,15 @@ const Navbar = () => {
   const { toggleSidebar } = useDashboardContext();
   return (
     <Wrapper>
-      <div className='nav-center'>
-        <button type='button' className='toggle-btn' onClick={toggleSidebar}>
+      <div className="nav-center">
+        <button type="button" className="toggle-btn" onClick={toggleSidebar}>
           <FaAlignLeft />
         </button>
         <div>
           <Logo />
-          <h4 className='logo-text'>dashboard</h4>
+          <h4 className="logo-text">dashboard</h4>
         </div>
-        <div className='btn-container'>toggle/logout</div>
+        <div className="btn-container">toggle/logout</div>
       </div>
     </Wrapper>
   );
@@ -1160,14 +1160,14 @@ const SmallSidebar = () => {
           showSidebar ? 'sidebar-container show-sidebar' : 'sidebar-container'
         }
       >
-        <div className='content'>
-          <button type='button' className='close-btn' onClick={toggleSidebar}>
+        <div className="content">
+          <button type="button" className="close-btn" onClick={toggleSidebar}>
             <FaTimes />
           </button>
           <header>
             <Logo />
           </header>
-          <div className='nav-links'>
+          <div className="nav-links">
             {links.map((link) => {
               const { text, path, icon } = link;
 
@@ -1175,12 +1175,12 @@ const SmallSidebar = () => {
                 <NavLink
                   to={path}
                   key={text}
-                  className='nav-link'
+                  className="nav-link"
                   onClick={toggleSidebar}
                   // will discuss in a second
                   end
                 >
-                  <span className='icon'>{icon}</span>
+                  <span className="icon">{icon}</span>
                   {text}
                 </NavLink>
               );
@@ -1289,7 +1289,7 @@ const NavLinks = () => {
   const { user, toggleSidebar } = useDashboardContext();
 
   return (
-    <div className='nav-links'>
+    <div className="nav-links">
       {links.map((link) => {
         const { text, path, icon } = link;
         // admin user
@@ -1298,10 +1298,10 @@ const NavLinks = () => {
             to={path}
             key={text}
             onClick={toggleSidebar}
-            className='nav-link'
+            className="nav-link"
             end
           >
-            <span className='icon'>{icon}</span>
+            <span className="icon">{icon}</span>
             {text}
           </NavLink>
         );
@@ -1330,7 +1330,7 @@ const BigSidebar = () => {
           showSidebar ? 'sidebar-container ' : 'sidebar-container show-sidebar'
         }
       >
-        <div className='content'>
+        <div className="content">
           <header>
             <Logo />
           </header>
@@ -1349,7 +1349,7 @@ const NavLinks = ({ isBigSidebar }) => {
   const { user, toggleSidebar } = useDashboardContext();
 
   return (
-    <div className='nav-links'>
+    <div className="nav-links">
       {links.map((link) => {
         const { text, path, icon } = link;
         // admin user
@@ -1358,10 +1358,10 @@ const NavLinks = ({ isBigSidebar }) => {
             to={path}
             key={text}
             onClick={isBigSidebar ? null : toggleSidebar}
-            className='nav-link'
+            className="nav-link"
             end
           >
-            <span className='icon'>{icon}</span>
+            <span className="icon">{icon}</span>
             {text}
           </NavLink>
         );
@@ -1457,12 +1457,12 @@ const LogoutContainer = () => {
   return (
     <Wrapper>
       <button
-        type='button'
-        className='btn logout-btn'
+        type="button"
+        className="btn logout-btn"
         onClick={() => setShowLogout(!showLogout)}
       >
         {user.avatar ? (
-          <img src={user.avatar} alt='avatar' className='img' />
+          <img src={user.avatar} alt="avatar" className="img" />
         ) : (
           <FaUserCircle />
         )}
@@ -1471,7 +1471,7 @@ const LogoutContainer = () => {
         <FaCaretDown />
       </button>
       <div className={showLogout ? 'dropdown show-dropdown' : 'dropdown'}>
-        <button type='button' className='dropdown-btn' onClick={logoutUser}>
+        <button type="button" className="dropdown-btn" onClick={logoutUser}>
           logout
         </button>
       </div>
@@ -1547,9 +1547,9 @@ const ThemeToggle = () => {
   return (
     <Wrapper onClick={toggleDarkTheme}>
       {isDarkTheme ? (
-        <BsFillSunFill className='toggle-icon' />
+        <BsFillSunFill className="toggle-icon" />
       ) : (
-        <BsFillMoonFill className='toggle-icon' />
+        <BsFillMoonFill className="toggle-icon" />
       )}
     </Wrapper>
   );
@@ -1561,7 +1561,7 @@ export default ThemeToggle;
 Navbar.jsx
 
 ```jsx
-<div className='btn-container'>
+<div className="btn-container">
   <ThemeToggle />
 </div>
 ```
@@ -3597,7 +3597,7 @@ import { FormRow, Logo } from '../components';
 const Register = () => {
   return (
     <Wrapper>
-      <Form method='post' className='form'>
+      <Form method="post" className="form">
         ...
       </Form>
     </Wrapper>
@@ -3674,9 +3674,9 @@ const Register = () => {
   const isSubmitting = navigation.state === 'submitting';
   return (
     <Wrapper>
-      <Form method='post' className='form'>
+      <Form method="post" className="form">
         ....
-        <button type='submit' className='btn btn-block' disabled={isSubmitting}>
+        <button type="submit" className="btn btn-block" disabled={isSubmitting}>
           {isSubmitting ? 'submitting...' : 'submit'}
         </button>
         ...
@@ -3705,7 +3705,7 @@ import { ToastContainer } from 'react-toastify';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <ToastContainer position='top-center' />
+    <ToastContainer position="top-center" />
   </React.StrictMode>
 );
 ```
@@ -3756,20 +3756,20 @@ const Login = () => {
   const isSubmitting = navigation.state === 'submitting';
   return (
     <Wrapper>
-      <Form method='post' className='form'>
+      <Form method="post" className="form">
         <Logo />
         <h4>login</h4>
-        <FormRow type='email' name='email' defaultValue='john@gmail.com' />
-        <FormRow type='password' name='password' defaultValue='secret123' />
-        <button type='submit' className='btn btn-block' disabled={isSubmitting}>
+        <FormRow type="email" name="email" defaultValue="john@gmail.com" />
+        <FormRow type="password" name="password" defaultValue="secret123" />
+        <button type="submit" className="btn btn-block" disabled={isSubmitting}>
           {isSubmitting ? 'submitting...' : 'submit'}
         </button>
-        <button type='button' className='btn btn-block'>
+        <button type="button" className="btn btn-block">
           explore the app
         </button>
         <p>
           Not a member yet?
-          <Link to='/register' className='member-btn'>
+          <Link to="/register" className="member-btn">
             Register
           </Link>
         </p>
@@ -3809,7 +3809,7 @@ const Login = () => {
 
   return (
     <Wrapper>
-      <Form method='post' className='form'>
+      <Form method="post" className="form">
         ...
         {errors && <p style={{ color: 'red' }}>{errors.msg}</p>}
         ...
@@ -3912,21 +3912,21 @@ const AddJob = () => {
 
   return (
     <Wrapper>
-      <Form method='post' className='form'>
-        <h4 className='form-title'>add job</h4>
-        <div className='form-center'>
-          <FormRow type='text' name='position' />
-          <FormRow type='text' name='company' />
+      <Form method="post" className="form">
+        <h4 className="form-title">add job</h4>
+        <div className="form-center">
+          <FormRow type="text" name="position" />
+          <FormRow type="text" name="company" />
           <FormRow
-            type='text'
-            labelText='job location'
-            name='jobLocation'
+            type="text"
+            labelText="job location"
+            name="jobLocation"
             defaultValue={user.location}
           />
 
           <button
-            type='submit'
-            className='btn btn-block form-btn '
+            type="submit"
+            className="btn btn-block form-btn "
             disabled={isSubmitting}
           >
             {isSubmitting ? 'submitting...' : 'submit'}
@@ -3943,14 +3943,14 @@ export default AddJob;
 #### Select Input
 
 ```js
-<div className='form-row'>
-  <label htmlFor='jobStatus' className='form-label'>
+<div className="form-row">
+  <label htmlFor="jobStatus" className="form-label">
     job status
   </label>
   <select
-    name='jobStatus'
-    id='jobStatus'
-    className='form-select'
+    name="jobStatus"
+    id="jobStatus"
+    className="form-select"
     defaultValue={JOB_TYPE.FULL_TIME}
   >
     {Object.values(JOB_TYPE).map((itemValue) => {
@@ -3971,14 +3971,14 @@ components/FormRowSelect.jsx
 ```js
 const FormRowSelect = ({ name, labelText, list, defaultValue = '' }) => {
   return (
-    <div className='form-row'>
-      <label htmlFor={name} className='form-label'>
+    <div className="form-row">
+      <label htmlFor={name} className="form-label">
         {labelText || name}
       </label>
       <select
         name={name}
         id={name}
-        className='form-select'
+        className="form-select"
         defaultValue={defaultValue}
       >
         {list.map((itemValue) => {
@@ -4197,7 +4197,7 @@ const JobsContainer = () => {
 
   return (
     <Wrapper>
-      <div className='jobs'>
+      <div className="jobs">
         {jobs.map((job) => {
           return <Job key={job._id} {...job} />;
         })}
@@ -4276,24 +4276,24 @@ const Job = ({
   return (
     <Wrapper>
       <header>
-        <div className='main-icon'>{company.charAt(0)}</div>
-        <div className='info'>
+        <div className="main-icon">{company.charAt(0)}</div>
+        <div className="info">
           <h5>{position}</h5>
           <p>{company}</p>
         </div>
       </header>
-      <div className='content'>
-        <div className='content-center'>
+      <div className="content">
+        <div className="content-center">
           <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
           <JobInfo icon={<FaCalendarAlt />} text={date} />
           <JobInfo icon={<FaBriefcase />} text={jobType} />
           <div className={`status ${jobStatus}`}>{jobStatus}</div>
         </div>
 
-        <footer className='actions'>
-          <Link className='btn edit-btn'>Edit</Link>
+        <footer className="actions">
+          <Link className="btn edit-btn">Edit</Link>
           <Form>
-            <button type='submit' className='btn delete-btn'>
+            <button type="submit" className="btn delete-btn">
               Delete
             </button>
           </Form>
@@ -4314,8 +4314,8 @@ import Wrapper from '../assets/wrappers/JobInfo';
 const JobInfo = ({ icon, text }) => {
   return (
     <Wrapper>
-      <span className='job-icon'>{icon}</span>
-      <span className='job-text'>{text}</span>
+      <span className="job-icon">{icon}</span>
+      <span className="job-text">{text}</span>
     </Wrapper>
   );
 };
@@ -4445,7 +4445,7 @@ export default Wrapper;
 Job.jsx
 
 ```js
-<Link to={`../edit-job/${_id}`} className='btn edit-btn'>
+<Link to={`../edit-job/${_id}`} className="btn edit-btn">
   Edit
 </Link>
 ```
@@ -4543,33 +4543,33 @@ const EditJob = () => {
 
   return (
     <Wrapper>
-      <Form method='post' className='form'>
-        <h4 className='form-title'>edit job</h4>
-        <div className='form-center'>
-          <FormRow type='text' name='position' defaultValue={job.position} />
-          <FormRow type='text' name='company' defaultValue={job.company} />
+      <Form method="post" className="form">
+        <h4 className="form-title">edit job</h4>
+        <div className="form-center">
+          <FormRow type="text" name="position" defaultValue={job.position} />
+          <FormRow type="text" name="company" defaultValue={job.company} />
           <FormRow
-            type='text'
-            labelText='job location'
-            name='jobLocation'
+            type="text"
+            labelText="job location"
+            name="jobLocation"
             defaultValue={job.jobLocation}
           />
 
           <FormRowSelect
-            name='jobStatus'
-            labelText='job status'
+            name="jobStatus"
+            labelText="job status"
             defaultValue={job.jobStatus}
             list={Object.values(JOB_STATUS)}
           />
           <FormRowSelect
-            name='jobType'
-            labelText='job type'
+            name="jobType"
+            labelText="job type"
             defaultValue={job.jobType}
             list={Object.values(JOB_TYPE)}
           />
           <button
-            type='submit'
-            className='btn btn-block form-btn '
+            type="submit"
+            className="btn btn-block form-btn "
             disabled={isSubmitting}
           >
             {isSubmitting ? 'submitting...' : 'submit'}
@@ -4588,8 +4588,8 @@ export default EditJob;
 Job.jsx
 
 ```js
-<Form method='post' action={`../delete-job/${_id}`}>
-  <button type='submit' className='btn delete-btn'>
+<Form method="post" action={`../delete-job/${_id}`}>
+  <button type="submit" className="btn delete-btn">
     Delete
   </button>
 </Form>
@@ -4693,10 +4693,10 @@ const StatItem = ({ count, title, icon, color, bcg }) => {
   return (
     <Wrapper color={color} bcg={bcg}>
       <header>
-        <span className='count'>{count}</span>
-        <span className='icon'>{icon}</span>
+        <span className="count">{count}</span>
+        <span className="icon">{icon}</span>
       </header>
-      <h5 className='title'>{title}</h5>
+      <h5 className="title">{title}</h5>
     </Wrapper>
   );
 };
@@ -4715,17 +4715,17 @@ const Admin = () => {
   return (
     <Wrapper>
       <StatItem
-        title='current users'
+        title="current users"
         count={users}
-        color='#e9b949'
-        bcg='#fcefc7'
+        color="#e9b949"
+        bcg="#fcefc7"
         icon={<FaSuitcaseRolling />}
       />
       <StatItem
-        title='total jobs'
+        title="total jobs"
         count={jobs}
-        color='#647acb'
-        bcg='#e0e8f9'
+        color="#647acb"
+        bcg="#e0e8f9"
         icon={<FaCalendarCheck />}
       />
     </Wrapper>
@@ -4859,34 +4859,34 @@ const Profile = () => {
   const isSubmitting = navigation.state === 'submitting';
   return (
     <Wrapper>
-      <Form method='post' className='form' encType='multipart/form-data'>
-        <h4 className='form-title'>profile</h4>
+      <Form method="post" className="form" encType="multipart/form-data">
+        <h4 className="form-title">profile</h4>
 
-        <div className='form-center'>
-          <div className='form-row'>
-            <label htmlFor='image' className='form-label'>
+        <div className="form-center">
+          <div className="form-row">
+            <label htmlFor="image" className="form-label">
               Select an image file (max 0.5 MB):
             </label>
             <input
-              type='file'
-              id='avatar'
-              name='avatar'
-              className='form-input'
-              accept='image/*'
+              type="file"
+              id="avatar"
+              name="avatar"
+              className="form-input"
+              accept="image/*"
             />
           </div>
-          <FormRow type='text' name='name' defaultValue={name} />
+          <FormRow type="text" name="name" defaultValue={name} />
           <FormRow
-            type='text'
-            labelText='last name'
-            name='lastName'
+            type="text"
+            labelText="last name"
+            name="lastName"
             defaultValue={lastName}
           />
-          <FormRow type='email' name='email' defaultValue={email} />
-          <FormRow type='text' name='location' defaultValue={location} />
+          <FormRow type="email" name="email" defaultValue={email} />
+          <FormRow type="text" name="location" defaultValue={location} />
           <button
-            className='btn btn-block form-btn'
-            type='submit'
+            className="btn btn-block form-btn"
+            type="submit"
             disabled={isSubmitting}
           >
             {isSubmitting ? 'submitting...' : 'save changes'}
@@ -5041,7 +5041,7 @@ export const updateUser = async (req, res) => {
 ```js
 {
   user.avatar ? (
-    <img src={user.avatar} alt='avatar' className='img' />
+    <img src={user.avatar} alt="avatar" className="img" />
   ) : (
     <FaUserCircle />
   );
@@ -5062,7 +5062,7 @@ const SubmitBtn = ({ formBtn }) => {
   const isSubmitting = navigation.state === 'submitting';
   return (
     <button
-      type='submit'
+      type="submit"
       className={`btn btn-block ${formBtn && 'form-btn'}`}
       disabled={isSubmitting}
     >
@@ -5453,7 +5453,7 @@ const ChartsContainer = ({ data }) => {
   return (
     <Wrapper>
       <h4>Monthly Applications</h4>
-      <button type='button' onClick={() => setBarChart(!barChart)}>
+      <button type="button" onClick={() => setBarChart(!barChart)}>
         {barChart ? 'Area Chart' : 'Bar Chart'}
       </button>
       {barChart ? <BarChart data={data} /> : <AreaChart data={data} />}
@@ -5489,13 +5489,13 @@ import {
 
 const AreaChartComponent = ({ data }) => {
   return (
-    <ResponsiveContainer width='100%' height={300}>
+    <ResponsiveContainer width="100%" height={300}>
       <AreaChart data={data} margin={{ top: 50 }}>
-        <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='date' />
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="date" />
         <YAxis allowDecimals={false} />
         <Tooltip />
-        <Area type='monotone' dataKey='count' stroke='#2cb1bc' fill='#bef8fd' />
+        <Area type="monotone" dataKey="count" stroke="#2cb1bc" fill="#bef8fd" />
       </AreaChart>
     </ResponsiveContainer>
   );
@@ -5519,13 +5519,13 @@ import {
 
 const BarChartComponent = ({ data }) => {
   return (
-    <ResponsiveContainer width='100%' height={300}>
+    <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} margin={{ top: 50 }}>
-        <CartesianGrid strokeDasharray='3 3 ' />
-        <XAxis dataKey='date' />
+        <CartesianGrid strokeDasharray="3 3 " />
+        <XAxis dataKey="date" />
         <YAxis allowDecimals={false} />
         <Tooltip />
-        <Bar dataKey='count' fill='#2cb1bc' barSize={75} />
+        <Bar dataKey="count" fill="#2cb1bc" barSize={75} />
       </BarChart>
     </ResponsiveContainer>
   );
@@ -5630,31 +5630,31 @@ import { useAllJobsContext } from '../pages/AllJobs';
 const SearchContainer = () => {
   return (
     <Wrapper>
-      <Form className='form'>
-        <h5 className='form-title'>search form</h5>
-        <div className='form-center'>
+      <Form className="form">
+        <h5 className="form-title">search form</h5>
+        <div className="form-center">
           {/* search position */}
 
-          <FormRow type='search' name='search' defaultValue='a' />
+          <FormRow type="search" name="search" defaultValue="a" />
           <FormRowSelect
-            labelText='job status'
-            name='jobStatus'
+            labelText="job status"
+            name="jobStatus"
             list={['all', ...Object.values(JOB_STATUS)]}
-            defaultValue='all'
+            defaultValue="all"
           />
           <FormRowSelect
-            labelText='job type'
-            name='jobType'
+            labelText="job type"
+            name="jobType"
             list={['all', ...Object.values(JOB_TYPE)]}
-            defaultValue='all'
+            defaultValue="all"
           />
           <FormRowSelect
-            name='sort'
-            defaultValue='newest'
+            name="sort"
+            defaultValue="newest"
             list={[...Object.values(JOB_SORT_BY)]}
           />
 
-          <Link to='/dashboard/all-jobs' className='btn form-btn delete-btn'>
+          <Link to="/dashboard/all-jobs" className="btn form-btn delete-btn">
             Reset Search Values
           </Link>
           {/* TEMP!!!! */}
@@ -5754,22 +5754,22 @@ const SearchContainer = () => {
 
   return (
     <Wrapper>
-      <Form className='form'>
-        <h5 className='form-title'>search form</h5>
-        <div className='form-center'>
+      <Form className="form">
+        <h5 className="form-title">search form</h5>
+        <div className="form-center">
           {/* search position */}
 
           <FormRow
-            type='search'
-            name='search'
+            type="search"
+            name="search"
             defaultValue={search}
             onChange={(e) => {
               submit(e.currentTarget.form);
             }}
           />
           <FormRowSelect
-            labelText='job status'
-            name='jobStatus'
+            labelText="job status"
+            name="jobStatus"
             list={['all', ...Object.values(JOB_STATUS)]}
             defaultValue={jobStatus}
             onChange={(e) => {
@@ -5777,8 +5777,8 @@ const SearchContainer = () => {
             }}
           />
           <FormRowSelect
-            labelText='job type'
-            name='jobType'
+            labelText="job type"
+            name="jobType"
             defaultValue={jobType}
             list={['all', ...Object.values(JOB_TYPE)]}
             onChange={(e) => {
@@ -5786,14 +5786,14 @@ const SearchContainer = () => {
             }}
           />
           <FormRowSelect
-            name='sort'
+            name="sort"
             defaultValue={sort}
             list={[...Object.values(JOB_SORT_BY)]}
             onChange={(e) => {
               submit(e.currentTarget.form);
             }}
           />
-          <Link to='/dashboard/all-jobs' className='btn form-btn delete-btn'>
+          <Link to="/dashboard/all-jobs" className="btn form-btn delete-btn">
             Reset Search Values
           </Link>
         </div>
@@ -5823,8 +5823,8 @@ const debounce = (onChange) => {
   };
 };
 <FormRow
-  type='search'
-  name='search'
+  type="search"
+  name="search"
   defaultValue={search}
   onChange={debounce((form) => {
     submit(form);
@@ -5860,7 +5860,7 @@ const JobsContainer = () => {
       <h5>
         {totalJobs} job{jobs.length > 1 && 's'} found
       </h5>
-      <div className='jobs'>
+      <div className="jobs">
         {jobs.map((job) => {
           return <Job key={job._id} {...job} />;
         })}
@@ -5898,7 +5898,7 @@ const PageBtnContainer = () => {
   return (
     <Wrapper>
       <button
-        className='btn prev-btn'
+        className="btn prev-btn"
         onClick={() => {
           let prevPage = currentPage - 1;
           if (prevPage < 1) prevPage = numOfPages;
@@ -5908,7 +5908,7 @@ const PageBtnContainer = () => {
         <HiChevronDoubleLeft />
         prev
       </button>
-      <div className='btn-container'>
+      <div className="btn-container">
         {pages.map((pageNumber) => (
           <button
             className={`btn page-btn ${pageNumber === currentPage && 'active'}`}
@@ -5920,7 +5920,7 @@ const PageBtnContainer = () => {
         ))}
       </div>
       <button
-        className='btn next-btn'
+        className="btn next-btn"
         onClick={() => {
           let nextPage = currentPage + 1;
           if (nextPage > numOfPages) nextPage = 1;
@@ -5980,7 +5980,7 @@ const PageBtnContainer = () => {
     // Add the dots before the current page if there are more than 3 pages
     if (currentPage > 3) {
       pageButtons.push(
-        <span className='page-btn dots' key='dots-1'>
+        <span className="page-btn dots" key="dots-1">
           ....
         </span>
       );
@@ -6007,7 +6007,7 @@ const PageBtnContainer = () => {
     }
     if (currentPage < numOfPages - 2) {
       pageButtons.push(
-        <span className=' page-btn dots' key='dots+1'>
+        <span className=" page-btn dots" key="dots+1">
           ....
         </span>
       );
@@ -6027,7 +6027,7 @@ const PageBtnContainer = () => {
   return (
     <Wrapper>
       <button
-        className='prev-btn'
+        className="prev-btn"
         onClick={() => {
           let prevPage = currentPage - 1;
           if (prevPage < 1) prevPage = numOfPages;
@@ -6037,9 +6037,9 @@ const PageBtnContainer = () => {
         <HiChevronDoubleLeft />
         prev
       </button>
-      <div className='btn-container'>{renderPageButtons()}</div>
+      <div className="btn-container">{renderPageButtons()}</div>
       <button
-        className='btn next-btn'
+        className="btn next-btn"
         onClick={() => {
           let nextPage = currentPage + 1;
           if (nextPage > numOfPages) nextPage = 1;
@@ -6250,7 +6250,7 @@ components/Loading.jsx
 
 ```js
 const Loading = () => {
-  return <div className='loading'></div>;
+  return <div className="loading"></div>;
 };
 
 export default Loading;
@@ -6269,7 +6269,7 @@ const DashboardLayout = ({ isDarkThemeEnabled }) => {
   return (
     <Wrapper>
       ...
-      <div className='dashboard-page'>
+      <div className="dashboard-page">
         {isPageLoading ? <Loading /> : <Outlet context={{ user }} />}
       </div>
       ...
@@ -6756,26 +6756,26 @@ const EditJob = () => {
 
   return (
     <Wrapper>
-      <Form method='post' className='form'>
-        <h4 className='form-title'>edit job</h4>
-        <div className='form-center'>
-          <FormRow type='text' name='position' defaultValue={job.position} />
-          <FormRow type='text' name='company' defaultValue={job.company} />
+      <Form method="post" className="form">
+        <h4 className="form-title">edit job</h4>
+        <div className="form-center">
+          <FormRow type="text" name="position" defaultValue={job.position} />
+          <FormRow type="text" name="company" defaultValue={job.company} />
           <FormRow
-            type='text'
-            name='jobLocation'
-            labelText='job location'
+            type="text"
+            name="jobLocation"
+            labelText="job location"
             defaultValue={job.jobLocation}
           />
           <FormRowSelect
-            name='jobStatus'
-            labelText='job status'
+            name="jobStatus"
+            labelText="job status"
             defaultValue={job.jobStatus}
             list={Object.values(JOB_STATUS)}
           />
           <FormRowSelect
-            name='jobType'
-            labelText='job type'
+            name="jobType"
+            labelText="job type"
             defaultValue={job.jobType}
             list={Object.values(JOB_TYPE)}
           />
