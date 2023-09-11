@@ -12,9 +12,8 @@ import { validateTest } from './middleware/validationMiddleware.js';
 //routers
 import jobRouter from './routes/jobRouter.js';
 import authRouter from './routes/authRouter.js';
-import userRouter from './routers/userRouter.js';
+import userRouter from './routes/userRouter.js';
 
-//middlware
 import errorHandlerMiddleware from './middleware/errorHandleMiddlware.js';
 import { authenticateUser } from './middleware/authMiddleware.js';
 
@@ -31,6 +30,10 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   console.log(req);
   res.json({ message: 'data received', data: req.body });
+});
+
+app.get('/api/v1/test', (req, res) => {
+  res.json({ msg: 'test route' });
 });
 
 app.post('/api/v1/test', validateTest, (req, res) => {

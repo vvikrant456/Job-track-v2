@@ -4,6 +4,7 @@ import {
   validateRegisterInput,
   validateLoginInput,
 } from '../middleware/validationMiddleware.js';
+
 const router = Router();
 
 router.post('/register', validateRegisterInput, register);
