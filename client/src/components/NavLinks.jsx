@@ -10,6 +10,8 @@ const NavLinks = () => {
       {links.map((link) => {
         const { text, path, icon } = link;
         // admin user
+        const { role } = user;
+        if (role !== 'admin' && path === 'admin') return;
         return (
           <NavLink
             to={path}
