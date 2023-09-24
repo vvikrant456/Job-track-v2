@@ -19,6 +19,7 @@ const LogoutContainer = () => {
         ) : (
           <FaUserCircle />
         )}
+        
 
         {user?.name}
         <FaCaretDown />
